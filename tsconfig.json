@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
-    "target": "ES5",
+    "target": "ES6",
     "module": "ES2020",
-    "rootDir": "./",
+    "lib": ["ES2020"],
+    "rootDir": "./lib",
     "outDir": "./dist",
+    "declaration": true,
+    "emitDeclarationOnly": true,
     "moduleResolution": "node",
     "moduleDetection": "force",
     "esModuleInterop": true,
@@ -12,5 +15,5 @@
     "skipLibCheck": true
   },
   "include": ["**/*.ts"],
-  "exclude": ["node_modules/**/*", "dist/**/*", "test/**/*"]
+  "exclude": ["node_modules/**/*", "dist/**/*", "**/*.test.ts"]
 }
