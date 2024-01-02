@@ -1,6 +1,6 @@
 {
   "name": "colorpia",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Conversion and manipulation of color data",
   "type": "module",
   "main": "index.js",
