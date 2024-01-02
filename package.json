@@ -1,6 +1,6 @@
 {
   "name": "colorpia",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Conversion and manipulation of color data",
   "keywords": [
     "color",
@@ -18,7 +18,7 @@
     "build": "rm -rf dist/* && npm run build:tsc && npm run build:js",
     "build:tsc": "tsc",
     "build:js": "node build.js",
-    "publish": "npm run build && npm publish --access public",
+    "pub": "npm run build && npm publish --access public",
     "start": "node index.js",
     "dev": "ts-node index.ts",
     "test": "jest -i",
