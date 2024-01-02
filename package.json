@@ -1,11 +1,24 @@
 {
   "name": "colorpia",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Conversion and manipulation of color data",
+  "keywords": [
+    "color",
+    "color conversion",
+    "color manipulation",
+    "color model",
+    "color format",
+    "color data",
+    "colorpia"
+  ],
   "type": "module",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc -p .",
+    "build": "rm -rf dist/* && npm run build:tsc && npm run build:js",
+    "build:tsc": "tsc",
+    "build:js": "node build.js",
+    "publish": "npm run build && npm publish --access public",
     "start": "node index.js",
     "dev": "ts-node index.ts",
     "test": "jest -i",
@@ -14,14 +27,25 @@
     "lint": "eslint .",
     "prettier": "prettier ."
   },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "author": "dongtimes2",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dongtimes2/colorpia/issues"
+  },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
     "@types/jest": "^29.5.11",
     "@typescript-eslint/eslint-plugin": "^6.16.0",
     "@typescript-eslint/parser": "^6.16.0",
+    "esbuild": "^0.19.11",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "husky": "^8.0.3",
