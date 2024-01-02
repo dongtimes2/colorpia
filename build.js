@@ -5,7 +5,6 @@ const baseConfig = {
   outdir: 'dist',
   bundle: true,
   minify: true,
-  sourcemap: true,
 };
 
 Promise.all([
