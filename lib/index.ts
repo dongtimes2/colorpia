@@ -48,6 +48,8 @@ export class Color {
       return this.r.toString(16);
     } else if (type === 'dec') {
       return this.r;
+    } else {
+      return this.r;
     }
   }
 
@@ -55,6 +57,8 @@ export class Color {
     if (type === 'hex') {
       return this.g.toString(16);
     } else if (type === 'dec') {
+      return this.g;
+    } else {
       return this.g;
     }
   }
@@ -64,6 +68,8 @@ export class Color {
       return this.b.toString(16);
     } else if (type === 'dec') {
       return this.b;
+    } else {
+      return this.b;
     }
   }
 
@@ -71,6 +77,8 @@ export class Color {
     if (type === 'hex') {
       return this.a.toString(16);
     } else if (type === 'dec') {
+      return getAlphaPercent(this.a);
+    } else {
       return getAlphaPercent(this.a);
     }
   }
@@ -85,6 +93,8 @@ export class Color {
       ];
     } else if (type === 'dec') {
       return [this.r, this.g, this.b, getAlphaPercent(this.a)];
+    } else {
+      return [this.r, this.g, this.b, getAlphaPercent(this.a)];
     }
   }
 
@@ -97,6 +107,13 @@ export class Color {
         alpha: this.a.toString(16),
       };
     } else if (type === 'dec') {
+      return {
+        red: this.r,
+        green: this.g,
+        blue: this.b,
+        alpha: getAlphaPercent(this.a),
+      };
+    } else {
       return {
         red: this.r,
         green: this.g,
