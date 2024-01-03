@@ -1,4 +1,4 @@
-![title](https://github.com/dongtimes2/readme_image/assets/98700888/0bb7a867-1ad6-4155-9dac-62336b226701)
+![title](assets/logo.png)
 
 # Installing
 
