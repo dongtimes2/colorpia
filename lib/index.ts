@@ -3,8 +3,6 @@ import { getAlphaPercent } from './utils/getAlphaPercent/getAlphaPercent';
 import { numberParser } from './utils/numberParser/numberParser';
 import { stringParser } from './utils/stringParser/stringParser';
 
-type getType = 'hex' | 'dec';
-
 export class Color {
   private r!: number;
   private g!: number;
@@ -43,7 +41,7 @@ export class Color {
     }
   }
 
-  public red(type: getType) {
+  public red(type: 'hex' | 'dec') {
     if (type === 'hex') {
       return this.r.toString(16);
     } else if (type === 'dec') {
@@ -53,7 +51,7 @@ export class Color {
     }
   }
 
-  public green(type: getType) {
+  public green(type: 'hex' | 'dec') {
     if (type === 'hex') {
       return this.g.toString(16);
     } else if (type === 'dec') {
@@ -63,7 +61,7 @@ export class Color {
     }
   }
 
-  public blue(type: getType) {
+  public blue(type: 'hex' | 'dec') {
     if (type === 'hex') {
       return this.b.toString(16);
     } else if (type === 'dec') {
@@ -73,7 +71,7 @@ export class Color {
     }
   }
 
-  public alpha(type: getType) {
+  public alpha(type: 'hex' | 'dec') {
     if (type === 'hex') {
       return this.a.toString(16);
     } else if (type === 'dec') {
@@ -83,7 +81,7 @@ export class Color {
     }
   }
 
-  public array(type: getType) {
+  public array(type: 'hex' | 'dec') {
     if (type === 'hex') {
       return [
         this.r.toString(16),
@@ -98,7 +96,7 @@ export class Color {
     }
   }
 
-  public object(type: getType) {
+  public object(type: 'hex' | 'dec') {
     if (type === 'hex') {
       return {
         red: this.r.toString(16),
