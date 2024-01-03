@@ -29,15 +29,25 @@ Rgb, expressed in decimal, ranges from 0 to 255.
 Alpha, expressed in decimal, ranges from 0 to 100.
 
 ```js
-const red = new Color('#ff0000'); // red: 255, green: 0, blue: 0, alpha: 100(=1.0)
-const blue = new Color(0x0000ff); // red: 0, green: 0, blue: 255, alpha: 100(=1.0)
-const green = new Color([0, 255, 0]); // red: 0, green: 255, blue: 0, alpha: 100(=1.0)
+const red = new Color('#ff0000');
+// red: 255, green: 0, blue: 0, alpha: 100(=1.0)
+
+const blue = new Color(0x0000ff);
+// red: 0, green: 0, blue: 255, alpha: 100(=1.0)
+
+const green = new Color([0, 255, 0]);
+// red: 0, green: 255, blue: 0, alpha: 100(=1.0)
 ```
 
 ```js
-const red = new Color('#ff000080'); // red: 255, green: 0, blue: 0, alpha: 50(=0.5)
-const blue = new Color(0x0000ffcc); // red: 0, green: 0, blue: 255, alpha: 80(=0.8)
-const green = new Color([0, 255, 0, 20]); // red: 0, green: 255, blue: 0, alpha: 20(=0.2)
+const red = new Color('#ff000080');
+// red: 255, green: 0, blue: 0, alpha: 50(=0.5)
+
+const blue = new Color(0x0000ffcc);
+// red: 0, green: 0, blue: 255, alpha: 80(=0.8)
+
+const green = new Color([0, 255, 0, 20]);
+// red: 0, green: 255, blue: 0, alpha: 20(=0.2)
 ```
 
 &nbsp;
@@ -59,8 +69,17 @@ color.blue('dec'); // 0
 color.alpha('hex'); // ff
 color.alpha('dec'); // 100
 
-color.object(); // { red: 255, green: 0, blue: 0, alpha: 100 }
-color.array(); // [ 255, 0, 0, 100 ]
+color.object('hex');
+// { red: 'ff', green: '0', blue: '0', alpha: 'ff' }
+
+color.object('dec');
+// { red: 255, green: 0, blue: 0, alpha: 100 }
+
+color.array('dec');
+// [ 255, 0, 0, 100 ]
+
+color.array('hex');
+// [ 'ff', '0', '0', 'ff' ]
 ```
 
 # License
