@@ -43,7 +43,7 @@ export class Color {
 
   public red(type: 'hex' | 'dec') {
     if (type === 'hex') {
-      return this.r.toString(16);
+      return this.r.toString(16).padStart(2, '0');
     } else if (type === 'dec') {
       return this.r;
     } else {
@@ -53,7 +53,7 @@ export class Color {
 
   public green(type: 'hex' | 'dec') {
     if (type === 'hex') {
-      return this.g.toString(16);
+      return this.g.toString(16).padStart(2, '0');
     } else if (type === 'dec') {
       return this.g;
     } else {
@@ -63,7 +63,7 @@ export class Color {
 
   public blue(type: 'hex' | 'dec') {
     if (type === 'hex') {
-      return this.b.toString(16);
+      return this.b.toString(16).padStart(2, '0');
     } else if (type === 'dec') {
       return this.b;
     } else {
@@ -73,7 +73,7 @@ export class Color {
 
   public alpha(type: 'hex' | 'dec') {
     if (type === 'hex') {
-      return this.a.toString(16);
+      return this.a.toString(16).padStart(2, '0');
     } else if (type === 'dec') {
       return getAlphaPercent(this.a);
     } else {
@@ -84,10 +84,10 @@ export class Color {
   public array(type: 'hex' | 'dec') {
     if (type === 'hex') {
       return [
-        this.r.toString(16),
-        this.g.toString(16),
-        this.b.toString(16),
-        this.a.toString(16),
+        this.r.toString(16).padStart(2, '0'),
+        this.g.toString(16).padStart(2, '0'),
+        this.b.toString(16).padStart(2, '0'),
+        this.a.toString(16).padStart(2, '0'),
       ];
     } else if (type === 'dec') {
       return [this.r, this.g, this.b, getAlphaPercent(this.a)];
@@ -99,10 +99,10 @@ export class Color {
   public object(type: 'hex' | 'dec') {
     if (type === 'hex') {
       return {
-        red: this.r.toString(16),
-        green: this.g.toString(16),
-        blue: this.b.toString(16),
-        alpha: this.a.toString(16),
+        red: this.r.toString(16).padStart(2, '0'),
+        green: this.g.toString(16).padStart(2, '0'),
+        blue: this.b.toString(16).padStart(2, '0'),
+        alpha: this.a.toString(16).padStart(2, '0'),
       };
     } else if (type === 'dec') {
       return {
