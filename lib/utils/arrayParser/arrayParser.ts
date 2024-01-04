@@ -8,7 +8,7 @@ export const arrayParser = (color: number[]) => {
     red = color[0];
     green = color[1];
     blue = color[2];
-    alpha = color[3] ? color[3] : 100;
+    alpha = Number.isInteger(color[3]) ? color[3] : 100;
   } else {
     throw new Error('Color array must have rgb or rgba data');
   }
