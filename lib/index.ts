@@ -120,4 +120,41 @@ export class Color {
       };
     }
   }
+
+  public string(type: '#' | '#a' | '0x' | '0xa') {
+    if (type === '#') {
+      return `#${this.r.toString(16).padStart(2, '0')}${this.g
+        .toString(16)
+        .padStart(2, '0')}${this.b.toString(16).padStart(2, '0')}`;
+    } else if (type === '#a') {
+      return `#${this.r.toString(16).padStart(2, '0')}${this.g
+        .toString(16)
+        .padStart(2, '0')}${this.b.toString(16).padStart(2, '0')}${this.a
+        .toString(16)
+        .padStart(2, '0')}`;
+    } else if (type === '0x') {
+      return `0x${this.r.toString(16).padStart(2, '0')}${this.g
+        .toString(16)
+        .padStart(2, '0')}${this.b.toString(16).padStart(2, '0')}`;
+    } else if (type === '0xa') {
+      return `0x${this.r.toString(16).padStart(2, '0')}${this.g
+        .toString(16)
+        .padStart(2, '0')}${this.b.toString(16).padStart(2, '0')}${this.a
+        .toString(16)
+        .padStart(2, '0')}`;
+    } else {
+      return `#${this.r.toString(16).padStart(2, '0')}${this.g
+        .toString(16)
+        .padStart(2, '0')}${this.b.toString(16).padStart(2, '0')}`;
+    }
+  }
+
+  public number() {
+    return parseInt(
+      `0x${this.r.toString(16).padStart(2, '0')}${this.g
+        .toString(16)
+        .padStart(2, '0')}${this.b.toString(16).padStart(2, '0')}`,
+      16,
+    );
+  }
 }
