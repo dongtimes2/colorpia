@@ -7,7 +7,7 @@ describe('error 테스트', () => {
     } catch (error) {
       if (error instanceof Error) {
         expect(error.message).toBe(
-          'Color code must be between 0x000000 and 0xffffffff',
+          'Color code must be between 0x00000000 and 0xffffffff',
         );
       }
     }

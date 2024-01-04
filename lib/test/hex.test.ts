@@ -98,37 +98,37 @@ describe('0x string aplha 테스트', () => {
 
 describe('0x number 테스트', () => {
   test('red값이 올바르게 반환되어야 합니다', () => {
-    const color = new Color(0x55fa3c);
+    const color = new Color(0x55fa3cff);
     expect(color.red('dec')).toBe(85);
     expect(color.red('hex')).toBe('55');
   });
 
   test('green값이 올바르게 반환되어야 합니다', () => {
-    const color = new Color(0x55fa3c);
+    const color = new Color(0x55fa3cff);
     expect(color.green('dec')).toBe(250);
     expect(color.green('hex')).toBe('fa');
   });
 
   test('blue값이 올바르게 반환되어야 합니다', () => {
-    const color = new Color(0x55fa3c);
+    const color = new Color(0x55fa3cff);
     expect(color.blue('dec')).toBe(60);
     expect(color.blue('hex')).toBe('3c');
   });
 
   test('alpha값이 올바르게 반환되어야 합니다', () => {
-    const color = new Color(0x55fa3c);
+    const color = new Color(0x55fa3cff);
     expect(color.alpha('dec')).toBe(100);
     expect(color.alpha('hex')).toBe('ff');
   });
 
   test('array값이 올바르게 반환되어야 합니다', () => {
-    const color = new Color(0x55fa3c);
+    const color = new Color(0x55fa3cff);
     expect(color.array('dec')).toEqual([85, 250, 60, 100]);
     expect(color.array('hex')).toEqual(['55', 'fa', '3c', 'ff']);
   });
 
   test('object값이 올바르게 반환되어야 합니다', () => {
-    const color = new Color(0x55fa3c);
+    const color = new Color(0x55fa3cff);
     expect(color.object('dec')).toEqual({
       red: 85,
       green: 250,

@@ -2,19 +2,15 @@ export const numberParser = (color: number) => {
   let red: number = 0;
   let green: number = 0;
   let blue: number = 0;
-  let alpha: number = 255;
+  let alpha: number = 0;
 
-  if (color.toString(16).length === 6) {
-    red = (color & 0xff0000) >>> 16;
-    green = (color & 0x00ff00) >>> 8;
-    blue = color & 0x0000ff;
-  } else if (color.toString(16).length === 8) {
+  if (color >= 0x00000000 && color <= 0xffffffff) {
     red = (color & 0xff000000) >>> 24;
     green = (color & 0x00ff0000) >>> 16;
     blue = (color & 0x0000ff00) >>> 8;
     alpha = color & 0x000000ff;
   } else {
-    throw new Error('Color code must be between 0x000000 and 0xffffffff');
+    throw new Error('Color code must be between 0x00000000 and 0xffffffff');
   }
 
   if (red < 0 || red > 255) {
