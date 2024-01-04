@@ -9,7 +9,7 @@ export const stringParser = (color: string) => {
       red = parseInt(color.slice(1, 3), 16);
       green = parseInt(color.slice(3, 5), 16);
       blue = parseInt(color.slice(5, 7), 16);
-      alpha = parseInt(color.slice(7, 9), 16)
+      alpha = Number.isInteger(parseInt(color.slice(7, 9), 16))
         ? parseInt(color.slice(7, 9), 16)
         : 255;
     } else {
@@ -20,7 +20,7 @@ export const stringParser = (color: string) => {
       red = parseInt(color.slice(2, 4), 16);
       green = parseInt(color.slice(4, 6), 16);
       blue = parseInt(color.slice(6, 8), 16);
-      alpha = parseInt(color.slice(8, 10), 16)
+      alpha = Number.isInteger(parseInt(color.slice(8, 10), 16))
         ? parseInt(color.slice(8, 10), 16)
         : 255;
     }
